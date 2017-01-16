@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator Assignment</title>
+<style type="text/css"> 
+
+		body {background-image:url("images/Green_lotus.jpg");
+			background-size: 100%;
+			background: cover;
+
+	}
+<!--dont know why h2 won't display WHITE-->
+
+	h2 {color: white;
+		font-family: "Copperplate Gothic Light", sans-serif;
+		
+	}
+
+	table 	{height: 600px;
+			width: 350px;
+			background-color: green;
+			text-align: center;
+			margin-left: 55%;
+			margin-right: 5%;		
+		}
+	.button { font-weight: bold;
+			font-size: 40px;
+		}
+
+	.operators {height: 120px;
+			    width: 60px;
+				color: black;
+				font-weight: bold;
+				font-size: 40px;
+
+			}
+	#Equal {height: 120px;
+			width: 60px;
+			background-color: red;
+			font-size:50px; 
+			font-weight: bold;
+		}
+	#Result{font-size: 40px;}
+
+</style>
+</head>
+<body img src="file:///Users/Student_34/Desktop/Calculator/Green_lotus">
+
+
+<h2>Calculator</h2>
+<br>
+<form Name="Calc">
+<table border="6">
+<tr>
+	<td id="Result" colspan="4"><INPUT id="Result" TYPE="text" NAME="Input"></td>
+</tr>
+<tr>
+	<td><INPUT class="button" TYPE="button" NAME="one" VALUE="1" OnClick="Calc.Input.value+='1'"></td>
+	<td><INPUT class="button" TYPE="button" NAME="two" VALUE="2" OnClick="Calc.Input.value+='2'"></td>
+	<td><INPUT class="button" TYPE="button" NAME="three" VALUE="3" OnClick="Calc.Input.value+='3'"></td>
+	<td ><INPUT class="operators" TYPE="button" NAME="plus" VALUE="+" OnClick="Calc.Input.value +='+'"></td>
+</tr>
+<tr>
+	<td><INPUT class="button" TYPE="button" NAME="four" VALUE="4" OnClick="Calc.Input.value+='4'"></td>
+	<td><INPUT class="button" TYPE="button" NAME="five" VALUE="5" OnClick="Calc.Input.value+='5'"></td>
+	<td><INPUT class="button" TYPE="button" NAME="six" VALUE="6" OnClick="Calc.Input.value+='6'"></td>
+	<td class=><INPUT class="operators" TYPE="button" NAME="minus" VALUE="-" OnClick="Calc.Input.value+='-'"></td>
+</tr>
+
+<tr>
+	<td><INPUT class="button" TYPE="button" NAME="seven" VALUE="7" OnClick="Calc.Input.value+='7'"></td>
+	<td><INPUT class="button" TYPE="button" NAME="eight" VALUE="8" OnClick="Calc.Input.value+='8'"></td>
+	<td><INPUT class="button" TYPE="button" NAME="nine" VALUE="9" OnClick="Calc.Input.value+='9'"></td>
+	<td><INPUT class="operators" TYPE="button" NAME="multiply" VALUE="*" OnClick="Calc.Input.value+='*'"></td>
+</tr>
+
+<tr>
+	
+	<td><INPUT class="button" TYPE="button" NAME="zero" VALUE="0" OnClick="Calc.Input.value+='0'"></TD>
+	<td><INPUT TYPE="button" NAME="Clear" VALUE="Clear" OnClick="Calc.Input.value=''"></td>
+	<td><INPUT class="operators" TYPE="button" NAME="divide" VALUE="/" OnClick="Calc.Input.value+='/'"></td>
+	<td ><INPUT id="Equal" TYPE="button" NAME="Equal" VALUE="=" OnClick="Calc.Input.value=eval(Calc.Input.value)"></td>
+	
+</tr>
+<!--can't get this code to work for AVG button.  Not sure how this would work for multiple numbers because this example is just for two-->
+	<input type ="button" onclick="average()"value="average">
+	<input type="text" id ="avg">
+	<script type"text/javascript">>
+	function average(){
+	    var a=parseInt(document.getElementById("one".value);
+	    var b=parseInt(document.getElementById("two".value);
+	    var afinal=((a+b)/2);
+	        document.getElementById('avg').value=afinal;
+    }
+
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>
